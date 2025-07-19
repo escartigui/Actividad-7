@@ -59,14 +59,14 @@ def menu():
              }
         if op == "2":
          print("\nListado de estudiantes")
-         for carnet,datos in estudiantes.items():
+         for carnet,datoss in estudiantes.items():
             print(f"Carnet: {carnet}")
-            print(f"nombre: {datos['nombre']}")
-            print(f"edad: {datos['edad']}")
-            for inge, datitis in estudiantes.items():
-             print(f"carrera: {datitis['carrera']}")
-             print(f"nota: {datitis['nota']}")
-             print(f"parcial: {datitis['parcial']}")
-             print(f"proyecto: {datitis['proyecto']}")
+            print(f"nombre: {datoss['nombre']}")
+            print(f"edad: {datoss['edad']}")
+         for ing,datoss in estudiantes.items():
+             print(f"carrera: {datoss['ing']['carrera']}")
+             print(f"nota: {datoss['ing']['nota']}")
+             print(f"parcial: {datoss['ing']['parcial']}")
+             print(f"proyecto: {datoss['ing']['proyecto']}")
 menu()
 
