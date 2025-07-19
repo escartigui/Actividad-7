@@ -27,7 +27,7 @@ def menu():
              canticurs = int(input("cuantos cursos desea ingresar"))
              for n in range(canticurs):
                   print(f"curso #{n+1}")
-                  nomCurso = input("Ingrese el nombre de los cursos")
+                  nomcurso = input("Ingrese el nombre de los cursos")
                   while True:
                      notatarea = int(input("ingrese la nota de su tarea: "))
                      if notatarea <= 0:
@@ -50,9 +50,9 @@ def menu():
                      "nombre": nombre,
                     "edad": edad,
                     "carrera": carrera,
-                  }
-                  cursos[nomCurso] ={
                     "cursos": cursos,
+                  }
+                  cursos[nomcurso] ={
                      "nota": notatarea,
                      "parcial": notaparcial,
                      "proyecto": notaproyec,
@@ -66,8 +66,9 @@ def menu():
             print(f"edad: {datos['edad']}")
             print(f"carrera: {datos['carrera']}")
             for curso,datoss in datos['cursos'].items():
-             print(f"nota: {datoss['datoss']['nota']}")
-             print(f"parcial: {datoss['datoss']['parcial']}")
-             print(f"proyecto: {datoss['datoss']['proyecto']}")
+             print(f"Curso: {curso}")
+             print(f"nota: {datoss['nota']}")
+             print(f"parcial: {datoss['parcial']}")
+             print(f"proyecto: {datoss['proyecto']}")
 menu()
 
