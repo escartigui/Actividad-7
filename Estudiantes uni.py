@@ -12,7 +12,7 @@ def menu():
         if op == "1":
          cantidad = int(input("Cuantos estudiante desea ingresar"))
          for i in range(cantidad):
-             print("Estudiante #{i+1}")
+             print(f"Estudiante #{i+1}")
              while True:
                  carnet = input("Ingrese el numero de carnet: ")
                  if carnet in estudiantes:
@@ -57,7 +57,7 @@ def menu():
 
                  }
              }
-
+             return menu()
          if op == "2":
           print("\nListado de estudiantes")
          for carnet,datos in estudiantes.items():
