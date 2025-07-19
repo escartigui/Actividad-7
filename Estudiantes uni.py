@@ -12,7 +12,7 @@ def menu():
         if op == "1":
          cantidad = int(input("Cuantos estudiante desea ingresar"))
          for i in range(cantidad):
-             print(f"Estudiante #{i+1}")
+             print("Estudiante #{i+1}")
              while True:
                  carnet = input("Ingrese el numero de carnet: ")
                  if carnet in estudiantes:
@@ -28,23 +28,23 @@ def menu():
                   print(f"curso #{n+1}")
                   cursos = input("Ingrese el nombre de los cursos")
                   while True:
-                   notatarea = int(input("ingrese la nota de su tarea: "))
-                   if notatarea <= 0:
-                    print("verifica lo ingresado, no puede ser negativo")
-                   else:
-                     break
+                     notatarea = int(input("ingrese la nota de su tarea: "))
+                     if notatarea <= 0:
+                        print("verifica lo ingresado, no puede ser negativo")
+                     else:
+                      break
                   while True:
-                    notaparcial = int(input("Ingrese la nota de su parcial: "))
-                    if notaparcial <= 0:
-                     print("Verifica lo ingresado, no puede ser negativo")
-                  else:
+                     notaparcial = int(input("Ingrese la nota de su parcial: "))
+                     if notaparcial <= 0:
+                      print("Verifica lo ingresado, no puede ser negativo")
+                     else:
                        break
                   while True:
                     notaproyec = int(input("Ingrese la nota de su proyecto: "))
                     if notaproyec <= 0:
                      print("verifica lo ingresado, no puede ser negativo")
-                  else:
-                     break
+                    else:
+                      break
                   estudiantes[carnet] = {
                      "nombre": nombre,
                     "edad": edad,
