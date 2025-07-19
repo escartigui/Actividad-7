@@ -21,34 +21,41 @@ def menu():
                      break
 
              nombre = input("Ingrese el nombre: ")
-             edad = input("Ingrese el edad: ")
-             carrera = input("Ingrese el carrera: ")
+             edad = input("Ingrese la edad: ")
+             carrera = input("Ingrese el nombre de la carrera: ")
              canticurs = int(input("cuantos cursos desea ingresar"))
              for n in range(canticurs):
-              print(f"curso #{n+1}")
-              cursos = input("Ingrese el nombre de los cursos")
-             while True:
-                 notatarea = int(input("ingrese la nota de su tarea: "))
-                 if notatarea <= 0:
-                  print("verifica lo ingresado, no puede ser negativo")
-                 else:
-                   break
-             while True:
-                 notaparcial = int(input("Ingrese la nota de su parcial: "))
-                 if notaparcial <= 0:
-                  print("Verifica lo ingresado, no puede ser negativo")
-                 else:
-                    break
-             while True:
-                  notaproyec = int(input("Ingrese la nota de su proyecto: "))
-                  if notaproyec <= 0:
-                   print("verifica lo ingresado, no puede ser negativo")
+                  print(f"curso #{n+1}")
+                  cursos = input("Ingrese el nombre de los cursos")
+                  while True:
+                   notatarea = int(input("ingrese la nota de su tarea: "))
+                   if notatarea <= 0:
+                    print("verifica lo ingresado, no puede ser negativo")
+                   else:
+                     break
+                  while True:
+                    notaparcial = int(input("Ingrese la nota de su parcial: "))
+                    if notaparcial <= 0:
+                     print("Verifica lo ingresado, no puede ser negativo")
+                  else:
+                       break
+                  while True:
+                    notaproyec = int(input("Ingrese la nota de su proyecto: "))
+                    if notaproyec <= 0:
+                     print("verifica lo ingresado, no puede ser negativo")
                   else:
                      break
-             estudiantes[carnet] = {
-                 "nombre": nombre,
-                 "edad": edad,
+                  estudiantes[carnet] = {
+                     "nombre": nombre,
+                    "edad": edad,
+                    "inge":{
+                    "carrera": carrera,
+                    "curso": cursos,
+                     "nota": notatarea,
+                     "parcial": notaparcial,
+                     "proyecto": notaproyec,
 
+                 }
              }
 
          if op == "2":
