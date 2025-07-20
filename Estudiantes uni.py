@@ -23,7 +23,6 @@ def menu():
              nombre = input("Ingrese el nombre: ")
              edad = input("Ingrese la edad: ")
              carrera = input("Ingrese el nombre de la carrera: ")
-             cursos = {}
              canticurs = int(input("cuantos cursos desea ingresar"))
              for n in range(canticurs):
                   print(f"curso #{n+1}")
@@ -50,13 +49,12 @@ def menu():
                      "nombre": nombre,
                     "edad": edad,
                     "carrera": carrera,
-                    "cursos": cursos,
-                  }
-                  cursos[nomcurso] ={
+                    "ing": {
+                     "nomcurso": nomcurso,
                      "nota": notatarea,
                      "parcial": notaparcial,
                      "proyecto": notaproyec,
-
+                    }
                  }
         if op == "2":
          print("\nListado de estudiantes")
@@ -65,10 +63,9 @@ def menu():
             print(f"nombre: {datos['nombre']}")
             print(f"edad: {datos['edad']}")
             print(f"carrera: {datos['carrera']}")
-            for curso,datoss in datos['cursos'].items():
-             print(f"Curso: {curso}")
-             print(f"nota: {datoss['nota']}")
-             print(f"parcial: {datoss['parcial']}")
-             print(f"proyecto: {datoss['proyecto']}")
+            print(f"nomcurso: {datos['ing']['nomcurso']}")
+            print(f"nota: {datos['ing']['nota']}")
+            print(f"parcial: {datos['ing']['parcial']}")
+            print(f"proyecto: {datos['ing']['proyecto']}")
 menu()
 
