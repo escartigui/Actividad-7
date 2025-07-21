@@ -62,7 +62,7 @@ def menu():
             print(f"Carnet: {carnet}")
             print(f"nombre: {datos['nombre']}")
             print(f"edad: {datos['edad']}")
-            print(f"carrera: {datos['carrera']}"
+            print(f"carrera: {datos['carrera']}")
             promedio = (datos["nota"] + datos["proyecto"] + datos["parcial"]) / 3
             print(f"nomcurso: {datos['ing']['nomcurso']}")
             print(f"nota: {datos['ing']['nota']}")
