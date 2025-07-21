@@ -95,6 +95,4 @@ def menu():
         if op == "4":
                 print("\nNOS VEREMOS EN OTRO MOMENTO")
                 break
-        else:
-            print("\nIntenta de nuevo")
 menu()
