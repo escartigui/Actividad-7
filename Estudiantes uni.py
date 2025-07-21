@@ -59,11 +59,11 @@ def menu():
         if op == "2":
          print("\nListado de estudiantes")
          for carnet,datos in estudiantes.items():
+            promedio = (datos["nota"] + datos["parcial"] + datos["proyecto"]) / 3
             print(f"Carnet: {carnet}")
             print(f"nombre: {datos['nombre']}")
             print(f"edad: {datos['edad']}")
             print(f"carrera: {datos['carrera']}")
-            promedio = (datos["nota"] + datos["proyecto"] + datos["parcial"]) / 3
             print(f"nomcurso: {datos['ing']['nomcurso']}")
             print(f"nota: {datos['ing']['nota']}")
             print(f"parcial: {datos['ing']['parcial']}")
