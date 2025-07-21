@@ -71,4 +71,24 @@ def menu():
                 print(f"proyecto: {curso['proyecto']}")
                 print(f"promedio: {promedio:.2f}")
 
+        if op == "3":
+            print("\nBusqueda de estudiantes")
+            buscado = input("Ingrese carnet para la busqueda: ")
+            if buscado in estudiantes:
+                est = estudiantes[buscado]
+                print("\n Lo encontramos")
+                print(f"nombre: {est['nombre']}")
+                print(f"edad: {est['edad']}")
+                print(f"carrera: {est['carrera']}")
+                print("cursos: ")
+                for codigo,curso in est["cursos"].items():
+                    promedio = (curso["tarea"]+curso["parcial"]+curso["proyecto"])/3
+                    print(f"codigo: {codigo}")
+                    print(f"nombre: {curso['nombre']}")
+                    print(f"tarea: {curso['tarea']}")
+                    print(f"parcial: {curso['parcial']}")
+                    print(f"proyecto: {curso['proyecto']}")
+                    print(f"promedio: {promedio:.2f}")
+
+
 menu()
