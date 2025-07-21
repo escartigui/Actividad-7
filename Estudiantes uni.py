@@ -25,8 +25,8 @@ def menu():
              edad = input("Ingrese la edad: ")
              carrera = input("Ingrese el nombre de la carrera: ")
              canticurs = int(input("cuantos cursos desea ingresar"))
-             for n in range(canticurs):
-                  print(f"curso #{n+1}")
+             for a in range(canticurs):
+                  print(f"curso #{a+1}")
                   nomcurso = input("Ingrese el nombre de los cursos")
                   while True:
                      notatarea = int(input("ingrese la nota de su tarea: "))
@@ -46,7 +46,7 @@ def menu():
                      print("verifica lo ingresado, no puede ser negativo")
                     else:
                       break
-                  estudiantes[carnet] = {
+                  estudiantes[carnet]["canticurs"][nomcurso] = {
                      "nombre": nombre,
                     "edad": edad,
                     "carrera": carrera,
