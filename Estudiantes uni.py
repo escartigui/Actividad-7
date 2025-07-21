@@ -31,40 +31,43 @@ def menu():
                   codigo_curso = input("Ingrese el codigo de la curso: ")
                   nomcurso = input("Ingrese el nombre de los cursos")
                   while True:
-                     notatarea = int(input("ingrese la nota de su tarea: "))
-                     if notatarea <= 0:
+                     tarea = int(input("ingrese la nota de su tarea: "))
+                     if tarea <= 0:
                         print("verifica lo ingresado, no puede ser negativo")
                      else:
                       break
                   while True:
-                     notaparcial = int(input("Ingrese la nota de su parcial: "))
-                     if notaparcial <= 0:
+                     parcial = int(input("Ingrese la nota de su parcial: "))
+                     if parcial <= 0:
                       print("Verifica lo ingresado, no puede ser negativo")
                      else:
                        break
                   while True:
-                    notaproyec = int(input("Ingrese la nota de su proyecto: "))
-                    if notaproyec <= 0:
+                    proyecto = int(input("Ingrese la nota de su proyecto: "))
+                    if proyecto <= 0:
                      print("verifica lo ingresado, no puede ser negativo")
                     else:
                       break
                   estudiantes[carnet]["cursos"][codigo_curso] = {
                       "nombre": nomcurso,
-                      "tarea" : notatarea,
-                      "parcial" : notaparcial,
-                      "proyecto" : notaproyec,
+                      "tarea" : tarea,
+                      "parcial" : parcial,
+                      "proyecto" : proyecto,
                     }
         if op == "2":
          print("\nListado de estudiantes")
          for carnet,datos in estudiantes.items():
-            promedio = (datos["nota"] + datos["parcial"] + datos["proyecto"]) / 3
-            print(f"Carnet: {carnet}")
+            print(f"\nCarnet: {carnet}")
             print(f"nombre: {datos['nombre']}")
             print(f"edad: {datos['edad']}")
             print(f"carrera: {datos['carrera']}")
-            print(f"nomcurso: {datos['ing']['nomcurso']}")
-            print(f"nota: {datos['ing']['nota']}")
-            print(f"parcial: {datos['ing']['parcial']}")
-            print(f"proyecto: {datos['ing']['proyecto']}")
-            print(f"promedio: {promedio:.2f}")
+            print("cursos: ")
+            for codigo,curso in datos["cursos"].items():
+                promedio = (curso["tarea"] + curso["parcial"] + curso["proyecto"])/3
+                print(f"codigo: {codigo}")
+                print(f"nombre: {curso['nombre']}")
+                print(f"tarea: {curso['tarea']}")
+                print(f"parcial: {curso['parcial']}")
+                print(f"proyecto: {curso['proyecto']}")
+
 menu()
