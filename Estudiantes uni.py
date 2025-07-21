@@ -15,17 +15,20 @@ def menu():
              print(f"Estudiante #{i+1}")
              while True:
                  carnet = input("Ingrese el numero de carnet: ")
+                 estudiantes[carnet] = {}
                  if carnet in estudiantes:
                      print("El codigo ya esta utilizado")
                  else:
                      break
 
-             nombre = input("Ingrese el nombre: ")
-             edad = input("Ingrese la edad: ")
-             carrera = input("Ingrese el nombre de la carrera: ")
+             estudiantes[carnet]["nombre"] = input("Ingrese el nombre: ")
+             estudiantes[carnet]["edad"] = input("Ingrese la edad: ")
+             estudiantes[carnet]["carrera"] = input("Ingrese el nombre de la carrera: ")
+             estudiantes[carnet]["cursos"] = {}
              canticurs = int(input("cuantos cursos desea ingresar"))
              for a in range(canticurs):
                   print(f"curso #{a+1}")
+                  codigo_curso = input("Ingrese el codigo de la curso: ")
                   nomcurso = input("Ingrese el nombre de los cursos")
                   while True:
                      notatarea = int(input("ingrese la nota de su tarea: "))
@@ -45,17 +48,12 @@ def menu():
                      print("verifica lo ingresado, no puede ser negativo")
                     else:
                       break
-                  estudiantes[carnet]["canticurs"][nomcurso] = {
-                     "nombre": nombre,
-                    "edad": edad,
-                    "carrera": carrera,
-                    "ing": {
-                     "nomcurso": nomcurso,
-                     "nota": notatarea,
-                     "parcial": notaparcial,
-                     "proyecto": notaproyec,
+                  estudiantes[carnet]["cursos"][codigo_curso] = {
+                      "nombre": nomcurso,
+                      "tarea" : notatarea,
+                      "parcial" : notaparcial,
+                      "proyecto" : notaproyec,
                     }
-                 }
         if op == "2":
          print("\nListado de estudiantes")
          for carnet,datos in estudiantes.items():
