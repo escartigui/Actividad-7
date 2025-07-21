@@ -63,9 +63,11 @@ def menu():
             print(f"nombre: {datos['nombre']}")
             print(f"edad: {datos['edad']}")
             print(f"carrera: {datos['carrera']}")
+            promedio = (datos["nota"] + datos["proyecto"] + datos["parcial"]) / 3
             print(f"nomcurso: {datos['ing']['nomcurso']}")
             print(f"nota: {datos['ing']['nota']}")
             print(f"parcial: {datos['ing']['parcial']}")
             print(f"proyecto: {datos['ing']['proyecto']}")
+            print(f"promedio: {promedio:.2f}")
 menu()
 
