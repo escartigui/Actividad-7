@@ -15,10 +15,10 @@ def menu():
              print(f"Estudiante #{i+1}")
              while True:
                  carnet = input("Ingrese el numero de carnet: ")
-                 estudiantes[carnet] = {}
                  if carnet in estudiantes:
                      print("El codigo ya esta utilizado")
                  else:
+                     estudiantes[carnet] = {}
                      break
 
              estudiantes[carnet]["nombre"] = input("Ingrese el nombre: ")
