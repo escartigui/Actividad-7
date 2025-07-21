@@ -69,5 +69,6 @@ def menu():
                 print(f"tarea: {curso['tarea']}")
                 print(f"parcial: {curso['parcial']}")
                 print(f"proyecto: {curso['proyecto']}")
+                print(f"promedio: {promedio:.2f}")
 
 menu()
