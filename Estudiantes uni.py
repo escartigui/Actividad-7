@@ -89,6 +89,12 @@ def menu():
                     print(f"parcial: {curso['parcial']}")
                     print(f"proyecto: {curso['proyecto']}")
                     print(f"promedio: {promedio:.2f}")
+            else:
+                print("No existe la busqueda")
 
-
+        if op == "4":
+                print("\nNOS VEREMOS EN OTRO MOMENTO")
+                break
+        else:
+            print("\nIntenta de nuevo")
 menu()
